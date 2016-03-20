@@ -100,6 +100,8 @@ ul li {
   color: gray; }
 
 .container > .row > .col-md-4 {
-  background: rgba(255, 255, 255, 0.8); }
+  background: rgba(255, 255, 255, 0.8);
+  border: solid black 2px;
+  height: 230px; }
 
 /*# sourceMappingURL=style.css.map */

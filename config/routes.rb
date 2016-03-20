@@ -11,7 +11,7 @@ Sate::Application.routes.draw do
     get 'login', to: 'sessions#new', as: 'login'
     get 'logout', to: 'sessions#destroy', as: 'logout'
 
-    root to: "picture#display_pictures"
+    root to: "welcome#index"
     get '/all_events' => 'picture#display_pictures'
     get '/top_events' => 'picture#filter_top_pictures'
     get 'welcome/loginpage'
