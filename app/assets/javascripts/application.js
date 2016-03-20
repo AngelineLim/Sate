@@ -19,9 +19,15 @@
 //= require googlemap
 //= require_tree .
 
+<<<<<<< HEAD
 // Loads all Semantic javascripts
 //= require semantic-ui
 //= require semantic-ui/modal
+=======
+Loads all Semantic javascripts
+= require semantic-ui
+= require semantic-ui/modal
+>>>>>>> 0dd7ddad8ebe102887c301b211c6ef390bfdddae
 = require semantic-ui/dropdownlayout
 
 //= require_self
