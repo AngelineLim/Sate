@@ -17,9 +17,7 @@
 //= require underscore
 //= require gmaps/google
 //= require googlemap
-//= require_tree .
-
-
+//= require_tree
 //= require_self
 
 
