@@ -1,27 +1,54 @@
 <body>
+<div class = "feed-container">
+  <div id="events-header">
+    <h1><i><strong>Food Events around you</strong><i></i>
+  </div>
+
+  <%- @events.each do |event| %>
+    <div class="inner-feed-container">
+        <div class="image-container">
+          <center>
+            <img class="feed-image" src="<%= event.imageurl ? event.imageurl : " " %>">
+          </center>
+        </div>
+        <p><%= event.name  %></p>
+        <p><%= event.place %></p>
+        <p><%= event.organisation %></p>
+        <div class="desc-container"><p><%= event.description %></p></div>
+        <p><a href="<%= event.page_link ? event.page_link : ""%>" class="btn btn-danger">More details</a></p>
+    </div>
+  <% end %>
+</div>
+</body>
+
+
+
+<!-- <body>
   <div id = "all-content">
     <div id="events-header">
-      <h1><i><strong>Events near you</strong></i></h1>
+      <h1><i><strong>Food Events around you</strong></i></h1>
     </div>
+
     <div id = "content">
       <div class="events">
       <%- @events.each_slice(3) do |group| %>
           <div class="row">
           <%- group.each do |event| %>
-            <div class="col-md-6">
-              <img data-src="..." alt="Card image">
-              <div class="card card-block">
-                <h3 class="card-title"><%= event.name %></h3>
-                <h4 class="card-subtitle text-muted">Organised by: <%= event.organisation %></h4>
-                <p class="card-text"><%= event.description %></p>
-                <a href="/events/<%= event.id %>" class="btn btn-danger">More details</a>
+            <div class="col-md-12">
+            <div class="inner-feed-container">
+              <div class="image-container">
+                <img class="feed-image" src="<%= event.imageurl ? event.imageurl : " " %>">
               </div>
+              <p class="card-title"><%= event.name %></p>
+              <p class="card-subtitle text-muted">Organised by: <%= event.organisation %></p>
+              <div class="desc-container"><p><%= event.description %></p></div>
+              <a href="/events/<%= event.id %>" class="btn btn-danger">More details</a>
             </div>
           <% end %>
       <% end %>
       </div>
     </div>
   </div>
-</body>
+</body> -->
 
 

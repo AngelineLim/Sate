@@ -1,40 +1,45 @@
-<h1>New Event</h1>
-<% flash.each do |key, msg| %>
-    <%= content_tag :div, msg, :class => [key, " message"], :id => "notice_#{key}" %>
-<% end %>
-<%= form_for :event, url: events_path do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :place %><br>
-    <%= f.text_area :place %>
-  </p>
+<div class="outer-auth">
+  <div class="auth-container">
+    <h1>New Event</h1>
+    <% flash.each do |key, msg| %>
+        <%= content_tag :div, msg, :class => [key, " message"], :id => "notice_#{key}" %>
+    <% end %>
+    <%= form_for :event, url: events_path do |f| %>
+      <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </p>
+     
+      <p>
+        <%= f.label :place %><br>
+        <%= f.text_area :place %>
+      </p>
 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
+      <p>
+        <%= f.label :description %><br>
+        <%= f.text_area :description %>
+      </p>
 
-  <p>
-    <%= f.label :organisation %><br>
-    <%= f.text_area :organisation %>
-  </p>
+      <p>
+        <%= f.label :organisation %><br>
+        <%= f.text_area :organisation %>
+      </p>
 
-  <p>
-    <%= f.label :cover_photo %><br>
-    <%= f.file_field :cover_photo %>
-  </p>
+      <p>
+        <%= f.label :cover_photo %><br>
+        <center class="margin: 0 auto; padding-left:5px;">
+          <%= f.file_field :cover_photo %>
+        </center>
+      </p>
 
-  <p>
-    <%= f.label :end_time %><br>
-    <%= f.datetime_field :end_time %>
-  </p>
+      <p>
+        <%= f.label :end_time %><br>
+        <%= f.datetime_field :end_time %>
+      </p>
 
-  <p>
-    <%= f.submit %>
-  </p>
-  <paper-button>Hello</paper-button>
-<% end %>
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>
+  </div>
+</div>
